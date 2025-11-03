@@ -1,6 +1,7 @@
 package com.swmansion.kmpsharing.sample
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import kotlin.random.Random
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.CoreGraphics.*
@@ -9,7 +10,7 @@ import platform.UIKit.*
 
 @OptIn(ExperimentalForeignApi::class)
 @Composable
-actual fun createAndSaveTestBitmap(): String? {
+actual fun createAndSaveTestBitmap(): String? = remember {
     val width = TEST_IMAGE_WIDTH.toDouble()
     val height = TEST_IMAGE_HEIGHT.toDouble()
     val size = CGSizeMake(width, height)
@@ -19,7 +20,7 @@ actual fun createAndSaveTestBitmap(): String? {
         UIGraphicsGetCurrentContext()
             ?: run {
                 UIGraphicsEndImageContext()
-                return null
+                return@remember null
             }
 
     val bgColor =
@@ -40,13 +41,13 @@ actual fun createAndSaveTestBitmap(): String? {
 
     val image = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()
-    if (image == null) return null
+    if (image == null) return@remember null
 
-    val data = UIImageJPEGRepresentation(image, 1.0) ?: return null
+    val data = UIImageJPEGRepresentation(image, 1.0) ?: return@remember null
     val filename = "test_image_${NSDate().timeIntervalSince1970}.jpg"
     val path = (NSTemporaryDirectory() as NSString).stringByAppendingPathComponent(filename)
 
-    return if (data.writeToFile(path, true)) {
+    return@remember if (data.writeToFile(path, true)) {
         "file://$path"
     } else {
         null

@@ -28,7 +28,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Preview
 fun App() {
     val share = rememberShare()
-    val bitmap = createAndSaveTestBitmap() ?: ""
+    val bitmap = createAndSaveTestBitmap()
 
     MaterialTheme {
         Box(modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
@@ -69,15 +69,17 @@ fun App() {
                 Spacer(modifier = Modifier.height(16.dp))
                 Button(
                     onClick = {
-                        share(
-                            data = bitmap,
-                            options =
-                                SharingOptions(
-                                    android =
-                                        AndroidSharingOptions(dialogTitle = "Software Mansion Blog")
-                                ),
-                        )
+                        bitmap?.let {
+                            share(
+                                data = it,
+                                options =
+                                    SharingOptions(
+                                        android = AndroidSharingOptions(dialogTitle = "Test Image!")
+                                    ),
+                            )
+                        }
                     },
+                    enabled = bitmap != null,
                     modifier = Modifier.height(56.dp).width(200.dp),
                     colors =
                         ButtonDefaults.buttonColors(
