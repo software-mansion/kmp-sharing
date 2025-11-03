@@ -16,8 +16,8 @@ import kotlin.random.Random
 
 @Composable
 actual fun createAndSaveTestBitmap(): String? {
-    val width = 512
-    val height = 512
+    val width = TEST_IMAGE_WIDTH
+    val height = TEST_IMAGE_HEIGHT
     val bitmap = createBitmap(width, height)
     val canvas = Canvas(bitmap)
     val paint = Paint()

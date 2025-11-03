@@ -10,8 +10,8 @@ import platform.UIKit.*
 @OptIn(ExperimentalForeignApi::class)
 @Composable
 actual fun createAndSaveTestBitmap(): String? {
-    val width = 512.0
-    val height = 512.0
+    val width = TEST_IMAGE_WIDTH.toDouble()
+    val height = TEST_IMAGE_HEIGHT.toDouble()
     val size = CGSizeMake(width, height)
 
     UIGraphicsBeginImageContextWithOptions(size, true, 1.0)
