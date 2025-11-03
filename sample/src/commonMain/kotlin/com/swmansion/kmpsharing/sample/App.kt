@@ -39,8 +39,7 @@ fun App() {
                 Button(
                     onClick = {
                         share(
-                            data =
-                                "https://blog.swmansion.com/reanimated-4-stable-release-the-future-of-react-native-animations-ba68210c3713",
+                            data = bitmap,
                             options =
                                 SharingOptions(
                                     android =
