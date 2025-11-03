@@ -11,16 +11,16 @@ Universal sharing function for Compose Multiplatform.
 Check out the sample project in the `/sample` directory for complete usage examples.
 
 <div align="center">
-    <video width="512" autoplay muted loop playsinline src="https://github.com/user-attachments/assets/59dcf160-7377-49b1-b9df-44f72afab086"></video>
+    <video width="512" autoplay muted loop playsinline src="https://github.com/user-attachments/assets/d2153edb-ae68-4c40-ac32-1bae3a20e153"></video>
 </div>
 
 ## ✨ Features
 
-* **Cross-platform compatibility** - Single API for both Android and iOS
-* **Native performance** - Uses Android `Intent` system and iOS `UIActivityViewController`
-* **File sharing support** - Share local files with proper MIME type detection
-* **Customizable options** - Platform-specific customization options
-* **Compose integration** - Built with Compose Multiplatform for modern UI development
+-   **Cross-platform compatibility** - Single API for both Android and iOS
+-   **Native performance** - Uses Android `Intent` system and iOS `UIActivityViewController`
+-   **File sharing support** - Share local files with proper MIME type detection
+-   **Customizable options** - Platform-specific customization options
+-   **Compose integration** - Built with Compose Multiplatform for modern UI development
 
 ## 🚀 Usage
 
@@ -28,7 +28,7 @@ Check out the sample project in the `/sample` directory for complete usage examp
 @Composable
 fun ShareButton() {
     val share = rememberShare()
-    
+
     Button(
         onClick = {
             share(
@@ -54,7 +54,6 @@ fun ShareButton() {
 
 For installation instructions visit our [dedicated document](https://github.com/software-mansion/kmp-sharing/blob/main/docs/INSTALLATION_SETUP.md).
 
-
 ## 📚 API Reference
 
 Check out our [dedicated documentation page](https://docs.swmansion.com/kmp-sharing/) for the API reference.
@@ -65,7 +64,7 @@ We welcome contributions! Please feel free to submit a pull request.
 
 ## KMP Sharing is created by Software Mansion
 
-[![swm](https://logo.swmansion.com/logo?color=white&variant=desktop&width=150&tag=typegpu-github 'Software Mansion')](https://swmansion.com)
+[![swm](https://logo.swmansion.com/logo?color=white&variant=desktop&width=150&tag=typegpu-github "Software Mansion")](https://swmansion.com)
 
 Since 2012 [Software Mansion](https://swmansion.com) is a software agency with
 experience in building web and mobile apps. We are Core React Native
