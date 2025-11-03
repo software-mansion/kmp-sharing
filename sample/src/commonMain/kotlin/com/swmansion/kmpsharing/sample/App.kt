@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -27,6 +28,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Preview
 fun App() {
     val share = rememberShare()
+    val bitmap = createAndSaveTestBitmap() ?: ""
 
     MaterialTheme {
         Box(modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
@@ -43,6 +45,35 @@ fun App() {
                             options =
                                 SharingOptions(
                                     android =
+                                        AndroidSharingOptions(
+                                            dialogTitle = "Software Mansion Blog",
+                                            previewData = bitmap,
+                                        )
+                                ),
+                        )
+                    },
+                    modifier = Modifier.height(56.dp).width(200.dp),
+                    colors =
+                        ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.primary,
+                            contentColor = MaterialTheme.colorScheme.onPrimary,
+                        ),
+                    shape = RoundedCornerShape(12.dp),
+                ) {
+                    Text(
+                        text = "Share a link!",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Medium,
+                    )
+                }
+                Spacer(modifier = Modifier.height(16.dp))
+                Button(
+                    onClick = {
+                        share(
+                            data = bitmap,
+                            options =
+                                SharingOptions(
+                                    android =
                                         AndroidSharingOptions(dialogTitle = "Software Mansion Blog")
                                 ),
                         )
@@ -56,7 +87,7 @@ fun App() {
                     shape = RoundedCornerShape(12.dp),
                 ) {
                     Text(
-                        text = "Share a file!",
+                        text = "Share an image!",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Medium,
                     )
