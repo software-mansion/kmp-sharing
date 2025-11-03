@@ -68,17 +68,7 @@ fun App() {
                 }
                 Spacer(modifier = Modifier.height(16.dp))
                 Button(
-                    onClick = {
-                        bitmap?.let {
-                            share(
-                                data = it,
-                                options =
-                                    SharingOptions(
-                                        android = AndroidSharingOptions(dialogTitle = "Test Image!")
-                                    ),
-                            )
-                        }
-                    },
+                    onClick = { bitmap?.let { share(data = it) } },
                     enabled = bitmap != null,
                     modifier = Modifier.height(56.dp).width(200.dp),
                     colors =
