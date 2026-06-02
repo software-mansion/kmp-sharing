@@ -67,13 +67,13 @@ We welcome contributions! Please feel free to submit a pull request.
 
 ## KMP Sharing is created by Software Mansion
 
-[![swm](https://logo.swmansion.com/logo?color=white&variant=desktop&width=150&tag=typegpu-github "Software Mansion")](https://swmansion.com)
+[![swm](https://logo.swmansion.com/logo?color=white&variant=desktop&width=150&tag=kmp-sharing-github "Software Mansion")](https://swmansion.com)
 
 Since 2012 [Software Mansion](https://swmansion.com) is a software agency with
 experience in building web and mobile apps. We are Core React Native
 Contributors and experts in dealing with all kinds of React Native issues. We
 can help you build your next dream product –
-[Hire us](https://swmansion.com/contact/projects?utm_source=typegpu&utm_medium=readme).
+[Hire us](https://swmansion.com/contact/projects?utm_source=kmp-sharing&utm_medium=readme).
 
 Made by [@software-mansion](https://github.com/software-mansion) and
 [community](https://github.com/software-mansion-labs/kmp-sharing/graphs/contributors) 💛
