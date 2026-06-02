@@ -1,4 +1,7 @@
 ![KMP Sharing by Software Mansion](https://github.com/software-mansion/kmp-sharing/blob/main/docs/images/cover_image.png?raw=true)
+[![Ad](https://swm-delivery.com/www/images/zone-gh-kmp-sharing-1?n=1)](https://swm-delivery.com/www/delivery/ck-slug.php?zoneid=zone-gh-kmp-sharing-1&n=1)
+[![Ad](https://swm-delivery.com/www/images/zone-gh-kmp-sharing-2?n=1)](https://swm-delivery.com/www/delivery/ck-slug.php?zoneid=zone-gh-kmp-sharing-2&n=1)
+[![Ad](https://swm-delivery.com/www/images/zone-gh-kmp-sharing-3?n=1)](https://swm-delivery.com/www/delivery/ck-slug.php?zoneid=zone-gh-kmp-sharing-3&n=1)
 
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.2.20-blue.svg)](https://kotlinlang.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
